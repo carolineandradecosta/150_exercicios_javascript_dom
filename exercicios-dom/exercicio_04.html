@@ -1,0 +1,29 @@
+<!--Crie uma página que calcule a soma dos números de 1 a N, onde N é um valor inserido pelo usuário.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de números</title>
+</head>
+<body>
+    <h1>Soma de 1 até n</h1>
+    <p>Insira um número</p>
+
+    <input type="number" id="numero" placeholder="Digite o número"><br>
+    <button id="botao" onclick="somaNumeros()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function somaNumeros(){
+            const numeroUsuario = parseInt(document.getElementById('numero').value)
+            let acumuladorSoma = 0
+            for(let i =1; i <= numeroUsuario; i++){
+                acumuladorSoma += i;
+            }
+            document.getElementById('resultado').innerText = `Resultado da soma: ${acumuladorSoma}`
+        }
+    </script>
+</body>
+</html>

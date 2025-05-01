@@ -4,8 +4,8 @@
 
 const palavras = [`bola`, `casa`, `porta`, `carro`];
 
-function DuplicaVogais(array){
+function duplicaVogais(array){
     return array.map(palavra => palavra.replace(/[aeiouáéíóúâêîôûãõàäëïöüAEIOUÁÉÍÓÚÂÊÎÔÛÃÕÀÄËÏÖÜ]/g, (vogal) => vogal + vogal))
 }
 
-console.log(DuplicaVogais(palavras))
+console.log(duplicaVogais(palavras))

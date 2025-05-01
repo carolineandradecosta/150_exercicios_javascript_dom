@@ -4,6 +4,6 @@
 
 const palavras = ["ilha", "inicio", "galinha", "moto", "porta"]
 
-const maiusculaEinvertida = (array) => array.map(palavra => palavra.split("").reverse().join("").toLowerCase())
+const maiusculaEinvertida = (array) => array.map(palavra => palavra.split("").reverse().join("").toUpperCase())
 
 console.log(maiusculaEinvertida(palavras))

@@ -1,0 +1,30 @@
+<!--Crie uma página que gere um número aleatório entre 1 e 100 e permita que o usuário tente adivinhar. Informe se a tentativa é maior, menor ou igual ao número gerado.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Aleatório</title>
+</head>
+<body>
+    <h1>Tente advinhar qual o número sorteado</h1>
+    <p>Digite um número que você acha que é o número sorteado:</p>
+    <input type="number" id="numero" placeholder="Digite um número"><br>
+    <button id="botão" onclick="verificarNumero()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        const numeroAleatorio = Math.floor(Math.random() * 100) + 1
+
+        function verificarNumero() {
+            const numeroUsuario = parseInt(document.getElementById('numero').value)
+            let mensagem = ""
+            if(numeroUsuario > numeroAleatorio) mensagem = "Seu palpite foi muito alto."
+            else if (numeroUsuario < numeroAleatorio) mensagem = "Seu palpite foi muito baixo."
+            else mensagem = "Parbéns, você acertou!"
+            document.getElementById("resultado").innerText = mensagem
+        }
+    </script>
+</body>
+</html>
