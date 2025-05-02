@@ -1,0 +1,31 @@
+<!--Crie uma página que exiba a tabuada de um número inserido pelo usuário, utilizando loops.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Insira o número que deseja ver a tabuada</p>
+
+    <input type="number" id="numero" placeholder="Digite o número"><br>
+    <button id="botao" onclick="montarTabuada()">Exibir</button>
+    <ul id="tabuada"></ul>
+
+    <script>
+        function montarTabuada(){
+            const numeroUsuario = parseInt(document.getElementById('numero').value)
+            const tabuadaEl = document.getElementById('tabuada')
+            tabuadaEl.innerHTML = ""
+            for (let i=1; i <=10; i++){
+                const item = document.createElement("li")
+                item.innerText = `${i} x ${numeroUsuario} = ${i * numeroUsuario}`
+                tabuadaEl.appendChild(item)
+            }
+        }
+    </script>
+</body>
+</html>
